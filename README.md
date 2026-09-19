@@ -1,6 +1,6 @@
 # AllSolos MCP Server
 
-Remote, read-only [Model Context Protocol](https://modelcontextprotocol.io) server for the [AllSolos](https://www.allsolos.com) jazz solo database. Connect it to any MCP-compatible host (Claude, ChatGPT, etc.) to search and explore thousands of cataloged jazz solos.
+Remote, read-only [Model Context Protocol](https://modelcontextprotocol.io) server for the [AllSolos](https://www.allsolos.com) musical solo database. Connect it to any MCP-compatible host (Claude, ChatGPT, etc.) to search and explore thousands of cataloged solos.
 
 ## Endpoint
 
@@ -22,7 +22,7 @@ All tools are annotated `readOnlyHint: true` — the server never modifies data.
 
 ## Data source
 
-The server is a thin wrapper over the public AllSolos API (`https://api.allsolos.com`), which backs [allsolos.com](https://www.allsolos.com) — a searchable catalog of the world's musical solos with YouTube players cued to cataloged timestamps.
+The server is a thin wrapper over the public AllSolos API (`https://api.allsolos.com`), which backs [allsolos.com](https://www.allsolos.com) — a searchable catalog of the world's musical solos, spanning all genres (jazz is the dominant category), with YouTube players cued to cataloged timestamps.
 
 ## Connecting
 
