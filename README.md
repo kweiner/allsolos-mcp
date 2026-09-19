@@ -1,6 +1,6 @@
 # AllSolos MCP Server
 
-Remote, read-only [Model Context Protocol](https://modelcontextprotocol.io) server for the [AllSolos](https://www.allsolos.com) musical solo database. Connect it to any MCP-compatible host (Claude, ChatGPT, etc.) to search and explore thousands of cataloged solos.
+Remote, read-only [Model Context Protocol](https://modelcontextprotocol.io) server for the [AllSolos](https://www.allsolos.com) musical solo database. Connect it to any MCP-compatible host (Claude, ChatGPT, Muse, etc.) to search and explore thousands of cataloged solos.
 
 ## Endpoint
 
@@ -14,11 +14,16 @@ Remote, read-only [Model Context Protocol](https://modelcontextprotocol.io) serv
 | ---- | ----------- |
 | `search_allsolos` | Search the catalog for soloists, tunes, albums, recordings, and solos. Input: `query` (string). |
 | `get_solo` | Retrieve one solo by AllSolos ID, or a random solo when no ID is given. Includes an embedded YouTube player cued to the solo via an MCP Apps widget. |
-| `get_album` | Retrieve one album by AllSolos ID, or a random album. |
+| `get_soloist` | Retrieve one soloist by AllSolos ID, or a random soloist. |
+| `get_tune` | Retrieve one tune by AllSolos ID, or a random tune. |
 | `get_recording` | Retrieve one recording by AllSolos ID, or a random recording. |
-| `get_insight` | Retrieve a music insight from the AllSolos catalog. |
+| `get_album` | Retrieve one album by AllSolos ID, or a random album. |
+| `get_composer` | Retrieve one composer by AllSolos ID, or a random composer. |
+| `get_insight` | Retrieve a music insight from the AllSolos catalog (e.g. most-recorded tunes, top soloists). |
 
 All tools are annotated `readOnlyHint: true` — the server never modifies data. Results include links back to entity pages on allsolos.com (tagged `utm_campaign=allsolos_mcp`).
+
+The embedded YouTube player uses the MCP Apps extension (`ui://` widget); hosts without widget support simply receive the structured JSON and text results.
 
 ## Data source
 
